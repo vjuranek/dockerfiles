@@ -1,0 +1,5 @@
+dn: dc=infinispan,dc=org
+objectClass: dcObject
+objectClass: organization
+dc: infinispan
+o : infinispan
