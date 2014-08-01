@@ -8,4 +8,6 @@ RUN mkdir -p /opt/ispn
 RUN mv ./infinispan-server-6.0.0.Final/* /opt/ispn
 RUN sed -i 's/security-domain="other" auth-method="BASIC"//' /opt/ispn/standalone/configuration/standalone.xml
 
+EXPOSE 8080
+
 ENTRYPOINT /opt/ispn/bin/standalone.sh -b `ip a s | sed -ne '/127.0.0.1/!{s/^[ \t]*inet[ \t]*\([0-9.]\+\)\/.*$/\1/p}'`
