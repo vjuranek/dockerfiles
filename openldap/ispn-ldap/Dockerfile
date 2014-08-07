@@ -13,4 +13,5 @@ RUN chkconfig slapd on
 ADD ispn.ldif /tmp/ispn.ldif
 RUN service slapd start; sleep 10; service slapd status && ldapadd -f /tmp/ispn.ldif -D cn=Manager,dc=infinispan,dc=org -w ispnPassword
 
+EXPOSE 389
 CMD ["/usr/sbin/slapd","-u","ldap","-d","1"]
