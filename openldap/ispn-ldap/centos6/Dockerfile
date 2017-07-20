@@ -10,7 +10,7 @@ RUN sed -i '$a olcAccess: {1}to * by dn.base="cn=Manager,dc=infinispan,dc=org" w
 
 RUN chkconfig slapd on
 
-ADD ispn.ldif /tmp/ispn.ldif
+ADD ../ispn.ldif /tmp/ispn.ldif
 RUN service slapd start; sleep 10; service slapd status && ldapadd -f /tmp/ispn.ldif -D cn=Manager,dc=infinispan,dc=org -w ispnPassword
 
 EXPOSE 389
