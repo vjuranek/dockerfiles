@@ -1,0 +1,18 @@
+= OpenLDAP with Infinispan testing records
+
+== Building images
+
+In order to avoid duplicating recources, `ldif` files are in `ldif` directory and thus Docker images have to be build from this directory.
+
+CentOS 6:
+[source, shell]
+----
+docker build -t openldap-ispn:6 -f centos6/Dockerfile .
+----
+
+CentOS 7:
+[source, shell]
+----
+docker build -t openldap-ispn:7 -f centos7/Dockerfile .
+----
+
