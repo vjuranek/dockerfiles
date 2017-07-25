@@ -1,6 +1,23 @@
 = OpenLDAP with Infinispan testing records
 
+== Examples
+=== Adding records
+[source, shell]
+----
+ldapadd -c -x -h 172.17.0.2 -p 389 -D cn=Manager,dc=infinispan,dc=org -w ispnPassword -f ispn.ldif
+----
+
+
+=== Queries
+[source, shell]
+----
+ldapsearch -x -h 172.17.0.2 -p 389 -b "dc=infinispan,dc=org" "(cn=*)"
+----
+
+
 == Building images
+=== TODO
+Currently does't work, as it's problematic to start ldap and then change config via `ldapmodify`, but it would be nice to have it working in thius way one day.
 
 In order to avoid duplicating recources, `ldif` files are in `ldif` directory and thus Docker images have to be build from this directory.
 
@@ -16,16 +33,3 @@ CentOS 7:
 docker build -t openldap-ispn:7 -f centos7/Dockerfile .
 ----
 
-== Examples
-=== Adding records
-[source, shell]
-----
-ldapadd -c -x -h 172.17.0.2 -p 389 -D cn=Manager,dc=infinispan,dc=org -w ispnPassword -f ispn.ldif
-----
-
-
-=== Queries
-[source, shell]
-----
-ldapsearch -x -h 172.17.0.2 -p 389 -b "dc=infinispan,dc=org" "(cn=*)"
-----
