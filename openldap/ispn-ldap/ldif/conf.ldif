@@ -1,0 +1,24 @@
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcSuffix
+olcSuffix: dc=infinispan,dc=org
+
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcRootDN
+olcRootDN: cn=ldapadm,dc=infinispan,dc=org
+
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcRootPW
+olcRootPW: {SSHA}A9N+s4SDCbOInD6S7lvknncue0oUDSWK
+
+# dn: olcDatabase={2}hdb,cn=config
+# changetype: modify
+# replace: olcAccess
+# olcAccess: {0}to attrs=userPassword by self write by dn.base="cn=ldapadm,dc=infinispan,dc=org" write by anonymous auth by * none
+
+# dn: olcDatabase={2}hdb,cn=config
+# changetype: modify
+# replace: olcAccess
+# olcAccess: {1}to * by dn.base="cn=ldapadm,dc=infinispan,dc=org" write by self write by * read
