@@ -4,7 +4,7 @@
 === Adding records
 [source, shell]
 ----
-ldapadd -c -x -h 172.17.0.2 -p 389 -D cn=Manager,dc=infinispan,dc=org -w ispnPassword -f ispn.ldif
+ldapadd -c -x -h 172.17.0.2 -p 389 -D cn=Manager,dc=infinispan,dc=org -w ispnPassword -f ldif/ispn.ldif
 ----
 
 
