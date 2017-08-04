@@ -1,46 +1,46 @@
-dn: dc=infinispan,dc=org
-objectClass: dcObject
-objectClass: organization
-dc: infinispan
-o : infinispan
+dn:dc=infinispan,dc=org
+objectClass:dcObject
+objectClass:organization
+dc:infinispan
+o:infinispan
 
-dn: ou=People,dc=infinispan,dc=org
-objectclass: top
-objectclass: organizationalUnit
-ou: People
+dn:ou=People,dc=infinispan,dc=org
+objectclass:top
+objectclass:organizationalUnit
+ou:People
 
-dn: uid=admin,ou=People,dc=infinispan,dc=org
-objectclass: top
-objectclass: uidObject
-objectclass: person
-uid: admin
-cn: ISPN Admin
-sn: admin
-userPassword: strong_password
+dn:cn=admin,ou=People,dc=infinispan,dc=org
+objectclass:top
+objectclass:uidObject
+objectclass:person
+uid:admin
+cn:ISPNAdmin
+sn:admin
+userPassword:Strong_password
 
-dn: uid=writer,ou=People,dc=infinispan,dc=org
-objectclass: top
-objectclass: uidObject
-objectclass: person
-uid: writer
-cn: ISPN Writer
-sn: writer
-userPassword: some_password
+dn:cn=writer,ou=People,dc=infinispan,dc=org
+objectclass:top
+objectclass:uidObject
+objectclass:person
+uid:writer
+cn:ISPNWriter
+sn:writer
+userPassword:Some_password
 
-dn: uid=reader,ou=People,dc=infinispan,dc=org
-objectclass: top
-objectclass: uidObject
-objectclass: person
-uid: reader
-cn: ISPN Reader
-sn: reader
-userPassword: password
+dn:cn=reader,ou=People,dc=infinispan,dc=org
+objectclass:top
+objectclass:uidObject
+objectclass:person
+uid:reader
+cn:ISPNReader
+sn:reader
+userPassword:Password_
 
-dn: uid=unprivileged,ou=People,dc=infinispan,dc=org
-objectclass: top
-objectclass: uidObject
-objectclass: person
-uid: unprivileged
-cn: ISPN Unprivileged
-sn: unprivileged
-userPassword: weak_password
+dn:cn=unprivileged,ou=People,dc=infinispan,dc=org
+objectclass:top
+objectclass:uidObject
+objectclass:person
+uid:unprivileged
+cn:ISPNUnprivileged
+sn:unprivileged
+userPassword:Weak_password
